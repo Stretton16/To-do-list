@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2f4f4f;
+            background-color: #98fb98; /* Soft green */
+            margin-bottom: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 18px;
+            text-align: center;
+            color: #4682b4;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        select {
+            padding: 8px;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        select, option {
+            color: #555;
+        }
+
+        option[value="No"] { background-color: #ffcccc; } /* Red for not started */
+        option[value="Currently Working"] { background-color: #ffff99; } /* Yellow for in progress */
+        option[value="Yes"] { background-color: #ccffcc; } /* Green for completed */
+
+        td label {
+            display: none; /* Hide labels as they are not needed for context */
+        }
+    </style>
+</head>
+<body>
+    <h1><b>To Do List App</b></h1>
+    <h2><i>Add, tick off, and remember tasks you've set yourself to do</i></h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tasks to do</th>
+                <th>Day set</th>
+                <th>Days left to complete</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="date"></td> <!-- Changed to date input for better usability -->
+                <td><input type="number" placeholder="Days"></td> <!-- Number input for numeric values -->
+                <td>
+                    <select id="completionLvl1" name="lvl"> <!-- Ensure unique IDs for each select element -->
+                        <option value="No">Not started</option>
+                        <option value="Currently Working">Currently doing</option>
+                        <option value="Yes">Completed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="date"></td>
+                <td><input type="number" placeholder="Days"></td>
+                <td>
+                    <select id="completionLvl2" name="lvl">
+                        <option value="No">Not started</option>
+                        <option value="Currently Working">Currently doing</option>
+                        <option value="Yes">Completed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="date"></td>
+                <td><input type="number" placeholder="Days"></td>
+                <td>
+                    <select id="completionLvl3" name="lvl">
+                        <option value="No">Not started</option>
+                        <option value="Currently Working">Currently doing</option>
+                        <option value="Yes">Completed</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

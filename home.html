@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>To Do List</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+      </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">TO DO LIST</h1>
+  <p class="w3-xlarge">Add, remove or check off tasks you need to do!</p>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Purpose</h1>
+      <h5 class="w3-padding-32">Completing tasks you've set for yourself is crucial for several reasons. First, it helps establish a sense of reliability and self-discipline. When you follow through on your commitments, you prove to yourself that you can trust your own word, which is fundamental to building self-confidence and self-esteem. Additionally, completing tasks leads to progress in achieving your personal and professional goals, effectively moving you closer to your aspirations. It also cultivates a habit of productivity and time management, allowing you to make the most of your day and prioritize effectively. Moreover, each completed task can provide a sense of accomplishment and motivation, reinforcing a positive feedback loop that energizes you to tackle subsequent challenges. This cycle of setting and achieving goals is instrumental in fostering personal growth and resilience.</h5>
+
+        </div>
+
+    <div class="w3-third w3-center">
+         </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+          </div>
+
+    <div class="w3-twothird">
+      <h1>Why choose us?</h1>
+      <h5 class="w3-padding-32">Choosing our to-do list app service offers a unique blend of user-friendly design and powerful functionality that stands out in a crowded market. Our app is designed with the understanding that simplicity and efficiency are key to productivity. Users benefit from a highly intuitive interface that allows them to quickly add, organize, and track tasks with minimal effort. We also incorporate innovative features such as intelligent reminders, customizable categories, and integration with other productivity tools, ensuring that our users can manage their day seamlessly from one central hub. Moreover, our commitment to user privacy means that all data is securely handled, giving users peace of mind as they organize their personal and professional lives. By choosing our app, users not only gain a reliable tool to enhance their daily productivity but also a partner committed to continuously evolving and improving to meet their changing needs.</h5>
+
+          </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://mhrglobal.com/uk/en" target="_blank">MHR</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
