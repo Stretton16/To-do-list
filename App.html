@@ -5,32 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List App</title>
     <style>
-        body {
+        body, h1, h2, th, td, input, select{
             background-color: #f0f8ff;
-            font-family: Arial, sans-serif;
-            padding: 20px;
+            font-family: "Montserrat", sans-serif;            
+            padding: 0 20px;
+            margin: 0;
         }
 
+        
         h1 {
             text-align: center;
-            color: #2f4f4f;
-            background-color: #98fb98; /* Soft green */
+            font-size: 75px;
+            color: #ffffff;
+            background-color: #f44336; 
             margin-bottom: 10px;
-            padding: 20px;
+            margin-left: -50px;
+            padding: 128px 128px;
+            margin-right: -50px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            
         }
 
-        h2 {
+        p {
             font-size: 18px;
             text-align: center;
-            color: #4682b4;
+            color: #ffffff;
             margin-top: 0;
             margin-bottom: 20px;
         }
 
         table {
             width: 100%;
+            size: 100px;
             border-collapse: collapse;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
@@ -38,12 +45,13 @@
         th, td {
             border: 1px solid #ddd;
             padding: 10px;
-            text-align: left;
+            text-align: center;
         }
 
         th {
-            background-color: #f0f0f0;
+            background-color: #f44336;
             text-align: center;
+            color: white;
         }
 
         input[type="text"] {
@@ -64,9 +72,9 @@
             color: #555;
         }
 
-        option[value="No"] { background-color: #ffcccc; } /* Red for not started */
+        option[value="No"] { background-color: #f81515; color: white; } /* Red for not started */
         option[value="Currently Working"] { background-color: #ffff99; } /* Yellow for in progress */
-        option[value="Yes"] { background-color: #ccffcc; } /* Green for completed */
+        option[value="Yes"] { background-color: #15fd15; } /* Green for completed */
 
         td label {
             display: none; /* Hide labels as they are not needed for context */
@@ -74,9 +82,9 @@
     </style>
 </head>
 <body>
-    <h1><b>To Do List App</b></h1>
-    <h2><i>Add, tick off, and remember tasks you've set yourself to do</i></h2>
-
+    <h1>Start adding tasks to do!</h1><p>
+    Add, tick off, and remember tasks you've set yourself to do</p></h1>
+</body>
     <table>
         <thead>
             <tr>
