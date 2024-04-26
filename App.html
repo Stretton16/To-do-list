@@ -98,6 +98,7 @@
                 <th>Day set</th>
                 <th>Days left to complete</th>
                 <th>Status</th>
+                <th>Priority</th>
             </tr>
         </thead>
         <tbody>
@@ -112,34 +113,46 @@
                         <option value="Yes">Completed</option>
                     </select>
                 </td>
+               <td> <input type="radio" id= "Priority" name = "Priority" value="High">
+                    <label for="Priority"> High </label><br>
+                    <input type="radio" id= "Priority" name = "Priority" value="Med">
+                    <label for="Priority"> Medium </label><br>
+                    <input type="radio" id= "Priority" name = "Priority" value="Low">
+                    <label for="Priority"> Low </label><br>
             </tr>
         </tbody>
     </table>
 
     <script>
-        function addRow() {
-            var table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
-            var newRow = table.insertRow(table.rows.length);
-            var cell1 = newRow.insertCell(0);
-            var cell2 = newRow.insertCell(1);
-            var cell3 = newRow.insertCell(2);
-            var cell4 = newRow.insertCell(3);
+    function addRow() {
+        var table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.rows.length);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
 
-            cell1.innerHTML = '<input type="text">';
-            cell2.innerHTML = '<input type="date">';
-            cell3.innerHTML = '<input type="number" placeholder="Days">';
-            cell4.innerHTML = '<select><option value="No">Not started</option><option value="Currently Working">Currently doing</option><option value="Yes">Completed</option></select>';
-        }
+        cell1.innerHTML = '<input type="text">';
+        cell2.innerHTML = '<input type="date">';
+        cell3.innerHTML = '<input type="number" placeholder="Days">';
+        cell4.innerHTML = '<select><option value="No">Not started</option><option value="Currently Working">Currently doing</option><option value="Yes">Completed</option></select>';
+        cell5.innerHTML = '<input type="radio" name="priority' + table.rows.length + '" value="1"><label>High</label><br>' +
+                          '<input type="radio" name="priority' + table.rows.length + '" value="2"><label>Medium</label><br>' +
+                          '<input type="radio" name="priority' + table.rows.length + '" value="3"><label>Low</label>';
+    }
 
-        function removeRow() {
-            var table = document.getElementById("myTable");
-            var rowCount = table.rows.length;
-            if (rowCount > 1) { // Make sure we don't delete the header
-                table.deleteRow(rowCount - 1);
-            } else {
-                alert("Cannot remove all rows.");
-            }
+    function removeRow() {
+        var table = document.getElementById("myTable");
+        var rowCount = table.rows.length;
+        if (rowCount > 1) { // Make sure we don't delete the header
+            table.deleteRow(rowCount - 1);
+        } else {
+            alert("Cannot remove all rows.");
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
+       
